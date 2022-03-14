@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+// next.config.js
+module.exports = {
+  images: {
+    domains: ['static.ghost.org', 'res-1.cloudinary.com', 'images.unsplash.com'],
+  },
 }
-
-module.exports = nextConfig

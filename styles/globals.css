@@ -5,3 +5,25 @@
 .nav.navbar-nav.navbar-right li a{
   font-size: 1.75rem;
 }
+
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem ;
+}
+
+.blog-card-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.copy-container {
+  height: 100%;
+  position: relative;
+}
+
+.copy-container a.section-btn {
+  /* position: absolute; */
+  bottom: 0;
+}
