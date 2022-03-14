@@ -36,7 +36,7 @@ export default function Home() {
      <Contact />
      <Footer />
 
-      <Script src="/js/jquery.js" />
+      <Script src="/js/jquery.js" strategy="beforeInteractive" />
       <Script src="/js/bootstrap.min.js" />
       <Script src="/js/jquery.stellar.min.js" />
       <Script src="/js/jquery.magnific-popup.min.js" />
