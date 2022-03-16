@@ -3,6 +3,7 @@ import Image from 'next/image';
 import GhostContentAPI from '@tryghost/content-api';
 
 export function Blog() {
+  const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
   const api = new GhostContentAPI({
     url: process.env.NEXT_PUBLIC_GHOST_URL,
@@ -10,7 +11,7 @@ export function Blog() {
     version: 'v4',
   });
 
-  // fetch 5 posts, including related tags and authors
+  // fetch 6 posts, including related tags and authors
   useEffect(() => {
     api.posts
       .browse({ limit: 6, include: 'tags,authors' })
@@ -18,7 +19,20 @@ export function Blog() {
       .catch((err) => {
         console.error(err);
       });
-  });
+  }, [api.posts]);
+
+  // this useEffect is for making sure the blog posts actually display once the data is received. Previously,
+  //The Blog section would remain blank until the user refreshes the browser a number of times.
+
+  useEffect(() => {
+    if(posts.length <= 0) {setLoading(true)} else if (posts.length > 0) {setLoading(false)}
+  }, [posts])
+
+  if (loading) return (
+      <>
+        <p>Loading...</p>
+      </>
+  );
 
   return (
     <>
@@ -32,66 +46,6 @@ export function Blog() {
                             <span className="line-bar">...</span>
                         </div>
                     </div>
-
-                    {/* <div className="col-md-6 col-sm-6">
-
-                        <div className="media blog-thumb">
-                            <div className="media-object media-left">
-                                <a href="blog-detail.html"><Image src="/images/blog-image1.jpg" width={800} height={1200} className="img-responsive" alt="" /></a>
-                            </div>
-                            <div className="media-body blog-info">
-                                <small><i className="fa fa-clock-o"></i> December 22, 2017</small>
-                                <h3><a href="blog-detail.html">How To Find Out Beautiful Workspace.</a></h3>
-                                <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                <a href="blog-detail.html" className="btn section-btn">Read article</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-6 col-sm-6">
-
-                        <div className="media blog-thumb">
-                            <div className="media-object media-left">
-                                <a href="blog-detail.html"><Image src="/images/blog-image2.jpg" width={800} height={1200} className="img-responsive" alt="" /></a>
-                            </div>
-                            <div className="media-body blog-info">
-                                <small><i className="fa fa-clock-o"></i> December 18, 2017</small>
-                                <h3><a href="blog-detail.html">woman sportwear.</a></h3>
-                                <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                <a href="blog-detail.html" className="btn section-btn">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-6 col-sm-6">
-
-                        <div className="media blog-thumb">
-                            <div className="media-object media-left">
-                                <a href="blog-detail.html"><Image src="/images/blog-image3.jpg" width={800} height={1200} className="img-responsive" alt="" /></a>
-                            </div>
-                            <div className="media-body blog-info">
-                                <small><i className="fa fa-clock-o"></i> December 14, 2017</small>
-                                <h3><a href="blog-detail.html">new creative fashion.</a></h3>
-                                <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                <a href="blog-detail.html" className="btn section-btn">Read article</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-6 col-sm-6">
-
-                        <div className="media blog-thumb">
-                            <div className="media-object media-left">
-                                <a href="blog-detail.html"><Image src="/images/blog-image4.jpg" width={800} height={1200} className="img-responsive" alt="" /></a>
-                            </div>
-                            <div className="media-body blog-info">
-                                <small><i className="fa fa-clock-o"></i> December 10, 2017</small>
-                                <h3><a href="blog-detail.html">minimalist design trend in 2018.</a></h3>
-                                <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                <a href="blog-detail.html" className="btn section-btn">View Detail</a>
-                            </div>
-                        </div>
-                    </div> */}
                     <ul className='blog-wrapper'>
                         {posts.map(post => (
                             <div key={post.id} className="">
@@ -117,32 +71,3 @@ export function Blog() {
     </>
 );
 }
-
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import { useState, useEffect } from "react";
-// import { getPosts } from "../lib/posts";
-
-// export const Blog = (props) => {
-
-//    useEffect(()=> {
-//     console.log(props)
-//    }, [props])
-        
-
-// }
-
-// export async function getStaticProps(context) {
-//     const posts = await getPosts()
-  
-//     if (!posts) {
-//       return {
-//         notFound: true,
-//       }
-//     }
-  
-//     return {
-//       props: { posts }
-//     }
-//   }
