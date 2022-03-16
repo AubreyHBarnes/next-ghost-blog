@@ -47,6 +47,7 @@ export function Blog() {
                         </div>
                     </div>
                     <ul className='blog-wrapper'>
+                        {/* publish date is being commented out until I can figure out how to format it correctly */}
                         {posts.map(post => (
                             <div key={post.id} className="">
 
@@ -55,9 +56,9 @@ export function Blog() {
                                         <a href="blog-detail.html"><Image src={post.feature_image} width={1200} height={800} className="img-responsive" alt="" /></a>
                                     </div>
                                     <div className="copy-container">
-                                        <small><i className="fa fa-clock-o"></i>{post.published_at}</small>
+                                        <p className='blog-date'><i className="fa fa-clock-o"></i>{post.published_at.split('T')[0]}</p>
                                         <h3><a href="blog-detail.html">{post.title}</a></h3>
-                                        <p>{post.excerpt}</p>
+                                        <p className='blog-excerpt'>{post.excerpt}</p>
                                         <a href="blog-detail.html" className="btn section-btn">View Detail</a>
                                     </div>
                                 </div>

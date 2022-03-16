@@ -24,16 +24,30 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
+  padding: 0 2rem;
+}
+
+.blog-date {
+  font-size: 1.1rem;
+  /* text-align: right; */
+}
+
+p.blog-excerpt {
+  font-size: 1.2rem;
 }
 
 .copy-container a.section-btn {
   width: 175px;
-  align-self: center;
+  align-self: flex-end;
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 768px) {
   .blog-wrapper {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .copy-container {
+    padding: 0;
   }
   
 }

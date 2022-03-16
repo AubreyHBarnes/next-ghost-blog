@@ -900,9 +900,9 @@ http://www.templatemo.com/tm-509-hydro
 
   @media screen and (max-width: 991px) {
 
-    h3 {
+    /* h3 {
       font-size: 1.2em;
-    }
+    } */
 
     p {
       font-size: 13px;
