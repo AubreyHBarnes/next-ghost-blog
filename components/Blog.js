@@ -19,7 +19,7 @@ export function Blog() {
       .catch((err) => {
         console.error(err);
       });
-  }, [api.posts]);
+  }, []);
 
   // this useEffect is for making sure the blog posts actually display once the data is received. Previously,
   //The Blog section would remain blank until the user refreshes the browser a number of times.
