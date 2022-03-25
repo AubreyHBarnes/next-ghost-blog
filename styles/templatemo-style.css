@@ -374,7 +374,7 @@ http://www.templatemo.com/tm-509-hydro
 
   #about {
     text-align: left;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
   }
 
   #about .about-info:first-child {

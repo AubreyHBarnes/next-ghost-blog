@@ -14,8 +14,6 @@ export const Contact = () => {
                             </div>
 
                             <div className="col-md-12 col-sm-12">
-                                
-
                                 <form id="contact-form" role="form" action="#" method="post">
                                     <div className="col-sm-12 col-md-12">
                                         <input type="text" className="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="" />
@@ -39,14 +37,6 @@ export const Contact = () => {
 
                                 </form>
                             </div>
-
-                            {/* <div className="col-md-4 col-sm-4">
-                                <div className="google-map">
-            
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
-                                </div>
-                            </div> */}
-
                     </div>
                 </div>
             </section>

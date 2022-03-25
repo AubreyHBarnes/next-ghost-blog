@@ -19,15 +19,15 @@ export const Navbar = () => {
                         <ul className="nav navbar-nav navbar-nav-first">
                             <li><a href="#home" className="smoothScroll">Home</a></li>
                             <li><a href="#about" className="smoothScroll">About</a></li>
-                            <li><a href="#blog" className="smoothScroll">Blog</a></li>
+                            {/* <li><a href="#blog" className="smoothScroll">Blog</a></li> */}
                             <li><a href="#work" className="smoothScroll">Our Work</a></li>
                             <li><a href="#contact" className="smoothScroll">Contacts</a></li>
                         </ul>
 
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a href="#"><i className="fa fa-github"></i></a></li>
-                            <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/AubreyHBarnes"><i className="fa fa-github"></i></a></li>
+                            <li><a href="https://twitter.com/HbarnesAu"><i className="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/aubrey-barnes/"><i className="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>

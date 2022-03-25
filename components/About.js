@@ -6,24 +6,27 @@ export const About = () => {
         <>
             <section id="about" data-stellar-background-ratio="0.5">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-5 col-sm-6">
+                    <div className="about-row ">
+                        <div className="about-txt-container">
                             <div className="about-info">
                                 <div className="section-title">
-                                    <h2>Let us introduce</h2>
+                                    <h2>Nice to meet you!</h2>
                                     <span className="line-bar">...</span>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                                <p>I have worked in Web Development for nearly two years,
+                                    mostly in a WordPress environment at Marketing Agencies around Lafayette, LA.
+                                    I am interested in branching out into Jamstack development.
+                                    While I am not a designer, I do have an eye for translating a design file into
+                                    an interactive pixel-perfect User Interface.</p>
                             </div>
                         </div>
 
-                        <div className="col-md-3 col-sm-6">
+                        {/* <div className="">
                             <div className="about-info skill-thumb">
 
                             </div>
-                        </div>  
-                        <div className="col-md-4 col-sm-12">
+                        </div>   */}
+                        <div className="">
                             <div className="about-image">
                                 <Image 
                                     src="/images/my-headshot.png" 

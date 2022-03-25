@@ -6,6 +6,20 @@
   font-size: 1.75rem;
 }
 
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.about-txt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .blog-wrapper {
   display: grid;
   gap: 1rem ;

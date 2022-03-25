@@ -8,17 +8,17 @@ export const Footer = () => {
                                 <div className="footer-bottom">
                                     <div className="col-md-6 col-sm-5">
                                         <div className="copyright-text"> 
-                                                <p>Copyright &copy; 2017 Your Company</p>
+                                                <p>Copyright &copy; 2022 Aubrey Barnes</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-sm-7">
                                         <div className="phone-contact"> 
-                                                <p>Call us <span>(+66) 010-020-0340</span></p>
+                                                <p>Email me at <a href="mailto:aubrey.hbarnes@gmail.com"><span>aubrey.hbarnes@gmail.com</span></a></p>
                                         </div>
                                         <ul className="social-icon">
-                                                <li><a href="https://www.facebook.com/templatemo" className="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                                <li><a href="#" className="fa fa-twitter"></a></li>
-                                                <li><a href="#" className="fa fa-instagram"></a></li>
+                                            <li><a href="https://github.com/AubreyHBarnes"><i className="fa fa-github"></i></a></li>
+                                            <li><a href="https://twitter.com/HbarnesAu"><i className="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/in/aubrey-barnes/"><i className="fa fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>

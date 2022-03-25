@@ -17,21 +17,17 @@ export default function Home() {
         <div className="overlay"></div>
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-sm-12">
+            <div className=" col-sm-12">
               <div className="home-info">
-                <h1>We make beautiful websites for all people.</h1>
-                <a href="#about" className="btn section-btn smoothScroll">Start a project</a>
-                <span>
-                  CALL US (+66) 010-020-0340
-                  <small>For any inquiry</small>
-                </span>
+                <h1>I&apos;m Aubrey Barnes, a Web Developer looking to make the world (wide web) a more beautiful place.</h1>
+                <a href="#contact" className="btn section-btn smoothScroll">Get In Touch</a>
               </div>
             </div>
           </div>
         </div>
      </section>
      <About />
-     <Blog />
+     {/* <Blog /> */}
      <Work />
      <Contact />
      <Footer />
