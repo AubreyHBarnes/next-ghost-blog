@@ -14,7 +14,7 @@ export const Contact = () => {
                             </div>
 
                             <div className="col-md-12 col-sm-12">
-                                <form name="contact" action="/" id="contact-form" role="form" data-netlify="true" method="post">
+                                <form name="contact" action="/success" id="contact-form" role="form" data-netlify="true" method="post">
                                     <div className="col-sm-12 col-md-12">
                                         <input type="text" className="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="" />
                                     </div>
