@@ -4,7 +4,7 @@ import Script from 'next/script'
 
 import { Navbar } from '../components/Navbar'
 import { About } from '../components/About'
-import { Blog } from '../components/Blog'
+// import { Blog } from '../components/Blog'
 import { Work } from '../components/Work'
 import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'

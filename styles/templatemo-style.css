@@ -113,7 +113,7 @@ http://www.templatemo.com/tm-509-hydro
     border-radius: 100px;
     color: #ffffff;
     cursor: pointer;
-    font-size: inherit;
+    font-size: 1.2rem;
     font-weight: normal;
     padding: 15px 30px;
     -webkit-transition: 0.5s;
@@ -131,8 +131,8 @@ http://www.templatemo.com/tm-509-hydro
 
   .overlay {
     background: #4a185b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0575E6, #4a185b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0575E6, #4a185b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #734226, #8C6B4F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734226, #8C6B4F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 0.7;
     position: absolute;
     width: 100%;
@@ -319,7 +319,7 @@ http://www.templatemo.com/tm-509-hydro
   -----------------------------------------*/
 
   #home {
-    background: url('/images/soap.jpg') no-repeat center center;
+    background: url('/images/new-hero-bg.jpg') no-repeat center center;
     background-size: cover;
     vertical-align: middle;
     display: -webkit-box;
