@@ -8,7 +8,7 @@ export const Contact = () => {
 
                             <div className="col-md-12 col-sm-12">
                                 <div className="section-title">
-                                    <h2>Let's Keep In Touch</h2>
+                                    <h2>Let&apos;s Keep In Touch</h2>
                                     <span className="line-bar">...</span>
                                 </div>
                             </div>
