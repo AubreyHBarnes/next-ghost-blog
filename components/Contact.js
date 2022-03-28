@@ -8,7 +8,7 @@ export const Contact = () => {
 
                             <div className="col-md-12 col-sm-12">
                                 <div className="section-title">
-                                    <h2>Contact us</h2>
+                                    <h2>Let's Keep In Touch</h2>
                                     <span className="line-bar">...</span>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ export const Contact = () => {
                                     </div>
 
                                     <div className="col-md-12 col-sm-12">
-                                        <textarea className="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
+                                        <textarea className="form-control" rows="6" placeholder="What can I do for you?" id="cf-message" name="cf-message" required=""></textarea>
                                     </div>
 
                                     <div className="col-md-4 col-sm-12">

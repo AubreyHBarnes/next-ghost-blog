@@ -13,7 +13,7 @@ export const Navbar = () => {
                             <span className="icon icon-bar"></span>
                             <span className="icon icon-bar"></span>
                         </button>
-                        <a href="index.html" className="navbar-brand">Hydro</a>
+                        <a href="index.html" className="navbar-brand">AHB<br />DEV</a>
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav navbar-nav-first">
