@@ -8,14 +8,16 @@
 }
 
 .about-row {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  /* display: grid;
+  grid-template-rows: 1fr 1fr; */
   max-width: 60rem;
   margin: 0 auto;
 }
 
-  .about-image *{
-    max-width: 500px;
+  .about-image {
+    max-width: 100%;
+    width: 500px;
+    margin: 0 auto;
   }
 
 .about-txt-container {

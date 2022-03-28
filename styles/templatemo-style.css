@@ -148,6 +148,8 @@ http://www.templatemo.com/tm-509-hydro
     text-align: center;
   }
 
+  
+
 
   /*---------------------------------------
        PRE LOADER              
@@ -319,7 +321,7 @@ http://www.templatemo.com/tm-509-hydro
   -----------------------------------------*/
 
   #home {
-    background: url('/images/new-hero-bg.jpg') no-repeat center center;
+    background: url('/images/new-hero-bg.webp') no-repeat center center;
     background-size: cover;
     vertical-align: middle;
     display: -webkit-box;
@@ -374,7 +376,7 @@ http://www.templatemo.com/tm-509-hydro
 
   #about {
     text-align: left;
-    /* padding-bottom: 0; */
+    padding: 0;
   }
 
   #about .about-info:first-child {
