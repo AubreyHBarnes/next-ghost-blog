@@ -33,11 +33,11 @@ export default function Home() {
      <Footer />
 
       <Script src="/js/jquery.js" strategy="beforeInteractive" />
-      <Script src="/js/bootstrap.min.js" strategy="lazyOnLoad" /> 
-      <Script src="/js/jquery.stellar.min.js" strategy="lazyOnLoad" />
-      <Script src="/js/jquery.magnific-popup.min.js" strategy="lazyOnLoad" />
-      <Script src="/js/smoothscroll.js" strategy="lazyOnLoad" />
-      <Script src="/js/custom.js" strategy="lazyOnLoad" />
+      <Script src="/js/bootstrap.min.js" /> 
+      <Script src="/js/jquery.stellar.min.js" />
+      <Script src="/js/jquery.magnific-popup.min.js" />
+      <Script src="/js/smoothscroll.js" />
+      <Script src="/js/custom.js" />
     </>
   )
 }
