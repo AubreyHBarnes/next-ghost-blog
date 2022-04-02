@@ -17,7 +17,7 @@ export const Work = () => {
 
                         <div className="col-md-3 col-sm-6">
                             <div className="work-thumb">
-                                <a href="https://confident-kirch-fa35dc.netlify.app/" className="image-popup">
+                                <a href="https://confident-kirch-fa35dc.netlify.app/" >
                                     <Image src="/images/space-site.png" width={750} height={1150} className="img-responsive" alt="Work" />
 
                                     <div className="work-info">
@@ -31,7 +31,7 @@ export const Work = () => {
                         <div className="col-md-3 col-sm-6">
 
                             <div className="work-thumb">
-                                <a href="https://festive-lamarr-eea456.netlify.app/" className="image-popup">
+                                <a href="https://festive-lamarr-eea456.netlify.app/" >
                                     <Image src="/images/cocktail_app.png" width={750} height={1150} className="img-responsive" alt="Work" />
 
                                     <div className="work-info">
@@ -45,7 +45,7 @@ export const Work = () => {
                         <div className="col-md-3 col-sm-6">
 
                             <div className="work-thumb">
-                                <a href="https://heuristic-carson-78a498.netlify.app/" className="image-popup">
+                                <a href="https://heuristic-carson-78a498.netlify.app/" >
                                     <Image src="/images/uploader.png" width={750} height={1150} className="img-responsive" alt="Work" />
 
                                     <div className="work-info">
@@ -59,7 +59,7 @@ export const Work = () => {
                         <div className="col-md-3 col-sm-6">
 
                             <div className="work-thumb">
-                                <a href="https://perronfinancialgroup.net/" className="image-popup">
+                                <a href="https://perronfinancialgroup.net/" >
                                     <Image src="/images/financial_group.png" width={750} height={1150} className="img-responsive" alt="Work" />
 
                                     <div className="work-info">
