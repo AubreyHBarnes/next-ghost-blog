@@ -1,15 +1,25 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
+import { useEffect } from 'react';
+
+import GhostContentAPI from '@tryghost/content-api';
 
 import { Navbar } from '../components/Navbar'
 import { About } from '../components/About'
-// import { Blog } from '../components/Blog'
+import { Blog } from '../components/Blog'
 import { Work } from '../components/Work'
 import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'
 
-export default function Home() {
+export default function Home(props) {
+
+  useEffect(() => {
+    console.log(props.result)
+  
+    
+  }, [])
+  
   return (
     <>
       <Navbar />
@@ -27,7 +37,7 @@ export default function Home() {
         </div>
      </section>
      <About />
-     {/* <Blog /> */}
+     <Blog posts={props.result} />
      <Work />
      <Contact />
      <Footer />
@@ -42,3 +52,24 @@ export default function Home() {
   )
 }
 
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const api = new GhostContentAPI({
+    url: process.env.NEXT_PUBLIC_GHOST_URL,
+    key: process.env.NEXT_PUBLIC_GHOST_API_KEY,
+    version: 'v4',
+  });
+
+  const posts = await api.posts
+    .browse({ limit: 6, include: 'tags,authors' })
+    
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      result: posts
+    },
+  }
+}
