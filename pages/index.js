@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Script from 'next/script'
 import { useEffect } from 'react';
 
@@ -13,12 +11,34 @@ import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'
 
 export default function Home(props) {
-
-  useEffect(() => {
-    console.log(props.result)
   
+  useEffect(() => {
+
+    const fetchData = async () => {
+      const api = new GhostContentAPI({
+        url: process.env.NEXT_PUBLIC_GHOST_URL,
+        key: process.env.NEXT_PUBLIC_GHOST_API_KEY,
+        version: 'v4',
+      });
+    
+      const getPosts = await api.posts.browse()
+  
+      const paths = getPosts.map(post => (
+        { 
+            params: { 
+                id: JSON.stringify(post.id) 
+        }
+    }))
+
+    const singlePost = await api.posts.read({ id:'622f40972c00ec001d42307a' })
+    console.log(singlePost)
+
+    }
+    
+    fetchData()
     
   }, [])
+  
   
   return (
     <>
@@ -37,7 +57,7 @@ export default function Home(props) {
         </div>
      </section>
      <About />
-     {/* <Blog posts={props.result} /> */}
+     <Blog posts={props.result} />
      <Work />
      <Contact />
      <Footer />
@@ -62,8 +82,7 @@ export async function getStaticProps() {
   });
 
   const posts = await api.posts
-    .browse({ limit: 6, include: 'tags,authors' })
-    
+    .browse()    
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
