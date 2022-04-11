@@ -57,7 +57,7 @@ export default function Home(props) {
         </div>
      </section>
      <About />
-     <Blog posts={props.result} />
+     {/* <Blog posts={props.result} /> */}
      <Work />
      <Contact />
      <Footer />
